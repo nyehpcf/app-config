@@ -17,3 +17,12 @@ eureka:
     nonSecurePort: 80
     metadataMap:
       instanceId: ${vcap.application.instance_id}
+
+---  # <--- ADD NEW DOCUMENT
+
+spring:
+  profiles: dev
+eureka:
+  client:    
+    serviceUrl:
+      defaultZone: https://service-registry-ossicular-buttress.apps.steveb.ed.pcfdemo.com # <-- substitute your service-registry url
